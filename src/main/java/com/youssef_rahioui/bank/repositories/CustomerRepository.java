@@ -1,4 +1,8 @@
 package com.youssef_rahioui.bank.repositories;
 
-public class CustomerRepository {
+import com.youssef_rahioui.bank.entities.Customer;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CustomerRepository  extends JpaRepository<Customer, Long> {
+    Customer findByEmail(String email);
 }
