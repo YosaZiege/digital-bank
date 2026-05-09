@@ -8,12 +8,14 @@ import lombok.AllArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.List;
 
 @SpringBootApplication
 @AllArgsConstructor
+@Order(1)
 public class BankApplication implements CommandLineRunner {
 
     private final AppUserRepository appUserRepository;
